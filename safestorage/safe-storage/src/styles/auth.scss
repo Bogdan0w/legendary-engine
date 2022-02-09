@@ -1,0 +1,91 @@
+@import "variables";
+
+.authForm {
+
+  border: 2px solid $auth-border;
+  border-radius: 10px;
+
+  .a-header {
+    padding: 0.7em 0.7em 1em;
+    border-bottom: 2px solid gray;
+    text-align: center;
+    font-size: 115%;
+    font-weight: bold;
+  }
+
+  > form {
+    padding: 1.8em 4em;
+    > div {
+      > label {
+        text-align: center;
+        display: block;
+      }
+      > input {
+        border: 1px solid $auth-border;
+        border-radius: 50px;
+        padding: 8px 15px;
+        background: white !important;
+      }
+    }
+    > button {
+      margin: auto;
+      display: block;
+      outline: none;
+      border: 1px solid gray;
+      background: none;
+      padding: 8px 25px;
+      border-radius: 50px;
+      transition: all .5s;
+      cursor: pointer;
+      &:hover {
+        background: $auth-button-hover-color;
+      }
+    }
+  }
+}
+
+
+
+.authLangSelect {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  background: #e7e7e7;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  img {
+    width: 2em;
+  }
+  * {
+    transition: all .5s;
+  }
+  &:hover {
+    > ul {
+      bottom: 80%;
+      opacity: 1;
+    }
+  }
+  > span {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+  }
+  > ul {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    padding: 1em;
+    transform: translate(-50%);
+    background: #e7e7e7;
+    border-radius: 19px;
+    opacity: 0;
+    > li {
+      &:first-child {
+        margin-bottom: 0.7em;
+      }
+      cursor: pointer;
+    }
+  }
+}

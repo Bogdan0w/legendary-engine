@@ -1,0 +1,71 @@
+<!--<h1 style="text-align: center;margin-top: 3em;">SafeStorage</h1>-->
+<div class="center authForm">
+    <form action="/login" method="post" class="mx-md-4">
+        <div>
+            <label for="_user" class="form-label" t="login">Login</label>
+            <input type="text" class="form-control" id="_user" aria-describedby="loginH" name="_user">
+        </div>
+        <br/>
+        <div>
+            <label for="passInput" class="form-label" t="pass">Password</label>
+            <input type="password" class="form-control" id="passInput" name="_pass">
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-danger mx-auto d-block" t="authorize">Sign on</button>
+    </form>
+</div>
+<div class="authLangSelect">
+    <span>
+        <img src="/assets/images/en.png" alt="EN" id="langSelected">
+    </span>
+    <ul>
+        <li onclick="setLang('ru')"><img src="/assets/images/ru.png" alt="RU"></li>
+        <li onclick="setLang('en')"><img src="/assets/images/en.png" alt="EN"></li>
+    </ul>
+</div>
+<script>
+    (function () {
+        const selected = document.getElementById("langSelected")
+        let oldLang = localStorage.getItem("lang") || "en";
+        const translations = {
+            ru: {
+                auth_header: "Авторизация",
+                login: "Логин",
+                pass: "Пароль",
+                authorize: "Авторизироваться"
+            },
+            en: {
+                auth_header: "Authorization",
+                login: "Login",
+                pass: "Password",
+                authorize: "Sign on"
+            }
+        }
+        setInterval(() => {
+            const lang = localStorage.getItem("lang") || "en"
+            if (oldLang === lang) return
+            selected.setAttribute("src", `/assets/images/${lang}.png`)
+            selected.setAttribute("alt", lang)
+            oldLang = lang
+            langUpdate()
+        }, 100)
+
+        function langUpdate() {
+            const lang = oldLang
+            document.querySelectorAll("*[t]")
+                    .forEach(el => {
+                        const key = el.getAttribute("t")
+                        if (typeof key !== "string") return
+                        el.innerHTML = translations[lang][key]
+                    })
+        }
+
+        selected.setAttribute("src", `/assets/images/${oldLang}.png`)
+        selected.setAttribute("alt", oldLang)
+        langUpdate()
+    })()
+
+    function setLang(lang) {
+        localStorage.setItem("lang", lang)
+    }
+</script>

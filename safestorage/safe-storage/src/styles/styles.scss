@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import "utils";
+@import "auth";
+@import "storage/main";
+
+body {
+  margin: 0;
+  font-family: 'Comfortaa', "Liberation Sans", sans-serif;
+}

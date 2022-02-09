@@ -1,0 +1,9 @@
+server-host: :8081
+jwt-secret: dwafawf
+users:
+  Admin:
+    pass: Admin
+    prefix: /
+    limit: 512
+    isAdmin: true
+    name: Safe

@@ -1,0 +1,14 @@
+.mediaView {
+  padding: 100%;
+  background: aliceblue;
+
+  > img, video {
+    max-width: 98vw;
+    max-height: 96vh;
+  }
+
+  > span {
+    margin-top: 1em;
+    display: block;
+  }
+}

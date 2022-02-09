@@ -1,0 +1,65 @@
+<div class="left-m">
+    <h3>
+        SafeStorage
+    </h3>
+    <progress max="100" value="0" id="disk-quota"></progress>
+    <br>
+    <span id="disk-quota-text"></span>
+    <div class="admDir" style="display: none;">
+        <br>
+        <button id="admConfig">конфиг</button>
+    </div>
+</div>
+<div></div>
+<div class="right-s">
+    <div class="nfp0">
+        <span id="now-folder-path">Path: </span>
+    </div>
+    <div class="files-pa">
+        <ul id="files"></ul>
+        <div id="uploadInfo" style="display: none">
+            <button id="stopUploadFiles">
+                Stop files uploading
+            </button>
+            <br>
+            <span id="uploadInfoFiles"></span>
+        </div>
+    </div>
+</div>
+<div id="ctxMenu" style="display: none; opacity: 0">
+    <button class="download__file">скачать</button>
+    <button class="edit__file">редаактировать</button>
+    <button class="move__file">перместить</button>
+    <button class="rename__file">переименовать</button>
+    <button class="remove__file">удалить</button>
+</div>
+<div class="fileEdit center">
+    <div class="content"></div>
+    <div>
+        <span class="file__name"></span>
+        <button class="cancel__button">Отмена</button>
+        <button class="save__button">Сохранить</button>
+    </div>
+</div>
+<div class="mediaView center"></div>
+<div class="admMenu center" style="display: none;">
+    <h3>Admin menu: users</h3>
+    <table>
+        <tbody>
+        <tr>
+            <th>Login</th>
+            <th>Pass</th>
+            <th>Prefix</th>
+            <th>Limit</th>
+            <th>isAdmin</th>
+            <th>Name</th>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="remove__button">remove user</button>
+        <button class="new__button">new</button>
+        <button class="save__button">save</button>
+        <button class="cancel__button">cancel</button>
+    </div>
+</div>

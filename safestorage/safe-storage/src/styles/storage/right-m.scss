@@ -1,0 +1,75 @@
+#now-folder-path {
+  margin: auto auto auto 20%;
+}
+
+.nfp0 {
+  height: 3em;
+  display: grid;
+}
+
+
+.files-pa {
+  width: 68vw;
+  height: 80vh;
+  overflow: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  position: relative;
+}
+
+#uploadInfo {
+  text-align: center;
+  background: #e5e5e5;
+  width: 68vw;
+  height: 44vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 36vh;
+}
+
+#uploadInfoFiles {
+  margin-top: 0.4em;
+  max-width: 35vw;
+  word-break: break-word;
+  display: inline-block;
+  text-align: center;
+}
+
+#stopUploadFiles {
+  padding: 0.4em 1em;
+  border: 0;
+  background: #fbb;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#files {
+  transition: all .45s;
+  height: 80vh;
+  margin: 0;
+
+  > li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    margin: 11px;
+    position: relative;
+
+    > main {
+      img, video {
+        max-width: 6em;
+        transform: scale(0.95);
+      }
+    }
+
+    > span {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      width: 10em;
+      overflow-wrap: break-word;
+      text-align: center;
+    }
+  }
+}

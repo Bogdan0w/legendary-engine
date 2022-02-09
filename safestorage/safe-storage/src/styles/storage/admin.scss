@@ -1,0 +1,35 @@
+.admDir {
+
+}
+
+.admMenu {
+  padding: 100%;
+  background: #fafafa;
+
+  > table {
+    border-collapse: collapse;
+    border-spacing: 14px;
+    max-height: 50vh;
+    max-width: 60vw;
+    overflow: auto;
+    border-radius: 8px;
+
+    th {
+      padding: 8px;
+      border: 1px solid gray;
+    }
+  }
+
+  > div {
+    > button {
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      background: none;
+
+      &.new__button {
+
+      }
+    }
+  }
+}

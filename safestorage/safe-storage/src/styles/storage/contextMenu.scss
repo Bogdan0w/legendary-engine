@@ -1,0 +1,33 @@
+#ctxMenu {
+  position: fixed;
+  background: #f8f8f8;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 4px;
+  opacity: 0.925;
+  width: min-content;
+  transition: all .16s;
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .download__file {
+    background: #9b7536;
+  }
+
+  .edit__file {
+    background: #9696ff;
+  }
+
+  .rename__file {
+    background: wheat;
+  }
+
+  .remove__file {
+    background: #ff9696;
+  }
+}
